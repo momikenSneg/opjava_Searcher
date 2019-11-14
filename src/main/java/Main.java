@@ -3,7 +3,6 @@ import java.util.concurrent.ExecutionException;
 
 public class Main {
     public static void main(String[] args) {
-        long s = System.currentTimeMillis();
         if (args.length == 0) {
             printHelp();
             return;
@@ -30,8 +29,6 @@ public class Main {
         } catch (IOException | ExecutionException | InterruptedException e){
             e.printStackTrace();
         }
-        long e = System.currentTimeMillis();
-        System.out.println((double)(e - s)/1000);
     }
 
     private static void printHelp() {
