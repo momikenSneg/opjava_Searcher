@@ -7,11 +7,11 @@ import java.util.concurrent.*;
 public class Searcher {
 
     private static int[] pi;
-    private static int BUF_SIZE;
+    private static final int BUF_SIZE = 134217728;
+    //private static final int BUF_SIZE = 1024;
 
     public static void search(String data, String folderName, boolean inFile) throws IOException, ExecutionException, InterruptedException {
         pi = getPrefix(data.toCharArray());
-        BUF_SIZE = data.length() > 1024 ? (int)(data.length()*1.5) : 1024;
         int processors = Runtime.getRuntime().availableProcessors();
         ExecutorService service = Executors.newFixedThreadPool(processors);
 

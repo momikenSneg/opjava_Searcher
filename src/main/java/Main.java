@@ -30,7 +30,8 @@ public class Main {
         } catch (IOException | ExecutionException | InterruptedException e){
             e.printStackTrace();
         }
-
+        long e = System.currentTimeMillis();
+        System.out.println((double)(e - s)/1000);
     }
 
     private static void printHelp() {
